@@ -35,8 +35,14 @@ button {
 	padding: 5px 20px;
 	border-radius: 10px;
 }
+
 button:active {
 	transform: translateY(2px);
+}
+
+canvas {
+	width: 78px !important;
+	height: 100px !important;
 }
 
 #form {
@@ -60,7 +66,7 @@ button:active {
 }
 
 #card {
-	background-color: #faddb2;
+	background-color: #8257e5;
 	padding: 10px 30px;
 	border-radius: 30px;
 }

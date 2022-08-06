@@ -66,6 +66,7 @@ function goBack() {
 	result.style = "display: none"
 	document.title = "RocketCard"
 	input.focus()
+	document.querySelectorAll("canvas").forEach((canvas) => canvas.remove())
 }
 
 function newBackground() {
@@ -83,6 +84,7 @@ function generateRandomColor() {
 }
 
 function salvarImg() {
+	document.querySelectorAll("canvas").forEach((canvas) => canvas.remove())
 	html2canvas(document.querySelector("#card"), {
 		backgroundColor: null,
 		allowTaint: true,
