@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+	--bg: #0d1115;
+	--bg-card: #0e1218;
+	--text: #f1f1f1;
+	--img-profile: #8257e5;
+	--buttons: #fff;
+	--bg-button: #000;
+	--border-button: #1a1a1a;
+}
+
+* {
+	font-family: "Prompt", sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: var(--bg);
+	color: var(--text);
+}
+
+button {
+	cursor: pointer;
+	background: var(--bg-button);
+	color: var(--buttons);
+	border: 2px solid var(--border-button);
+	padding: 5px 20px;
+	border-radius: 10px;
+}
+button:active {
+	transform: translateY(2px);
+}
+
+#form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+
+#form #gitUser {
+	text-align: center;
+}
+
+#result {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+
+#card {
+	background-color: #faddb2;
+	padding: 10px 30px;
+	border-radius: 30px;
+}
+
+#card #wrapper {
+	background-color: var(--bg-card);
+	border-radius: 30px;
+	padding: 20px 40px;
+	position: relative;
+	min-width: 200px;
+	overflow: hidden;
+}
+
+#card #wrapper #head {
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	gap: 20px;
+}
+
+#card #wrapper #head img {
+	width: 40px;
+	border-radius: 100%;
+	border: 1px solid white;
+}
+
+#card #wrapper #content {
+	position: relative;
+	z-index: 2;
+	margin-top: 150px;
+	background-color: #0d111588;
+	border-radius: 20px;
+	width: max-content;
+	padding: 10px 0;
+	padding-right: 20px;
+}
+
+#card #wrapper #footer {
+	display: flex;
+	align-items: center;
+	justify-content: end;
+}
+
+#card #wrapper #footer img {
+	width: 40px;
+	border-radius: 100%;
+}
+
+#card #wrapper #userPic {
+	position: absolute;
+	z-index: 0;
+	width: 200px;
+	border-radius: 100%;
+	border: 6px solid var(--img-profile);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	right: -30px;
+	animation: float 2s ease-in-out infinite;
+}
+
+#card #wrapper #userPic img {
+	width: 100%;
+}
+
+#voltar {
+	position: absolute;
+	top: 70px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1em;
+	cursor: pointer;
+}
+
+@keyframes float {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}

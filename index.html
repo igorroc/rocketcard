@@ -5,6 +5,82 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>RocketCard</title>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="shortcut icon"
+			href="https://avatars.githubusercontent.com/u/28929274?s=280&v=4"
+			type="image/x-icon"
+		/>
+		<script src="https://code.iconify.design/iconify-icon/1.0.0-beta.2/iconify-icon.min.js"></script>
 	</head>
-	<body></body>
+	<body>
+		<form onsubmit="searchUser(event)" id="form">
+			<label for="gitUser">Digite o nome do usuário</label>
+			<input type="text" name="gitUser" id="gitUser" />
+			<button id="submit">Buscar</button>
+		</form>
+		<div id="result" style="display: none">
+			<div id="voltar" onclick="goBack()">
+				<iconify-icon icon="eva:arrow-ios-back-fill"></iconify-icon>
+				voltar
+			</div>
+			<p>Compartilhe seu <b>#RocketCard</b></p>
+			<div id="card">
+				<div id="wrapper">
+					<div id="head">
+						<img
+							src="https://avatars.githubusercontent.com/u/28929274?s=280&v=4"
+							alt="Image PlaceHolder"
+						/>
+						<span>User</span>
+					</div>
+					<div id="userPic">
+						<img
+							src="https://blog.megajogos.com.br/wp-content/uploads/2018/07/no-image.jpg"
+							alt="Image PlaceHolder"
+						/>
+					</div>
+					<div id="content">
+						<div class="item" id="seguidores">
+							<iconify-icon icon="bi:people-fill"></iconify-icon>
+							<span>X Seguidores</span>
+						</div>
+						<div class="item" id="seguindo">
+							<iconify-icon icon="bi:people-fill"></iconify-icon>
+							<span>X Seguindo</span>
+						</div>
+						<div class="item" id="repositorios">
+							<iconify-icon
+								icon="ri:git-repository-fill"
+							></iconify-icon>
+							<span>X Repositórios</span>
+						</div>
+						<div class="item" id="empresa">
+							<iconify-icon
+								icon="bxs:building-house"
+							></iconify-icon>
+							<span>Empresa</span>
+						</div>
+						<div class="item" id="cidade">
+							<iconify-icon icon="eva:pin-fill"></iconify-icon>
+							<span>Cidade</span>
+						</div>
+					</div>
+					<div id="footer">
+						<img
+							src="https://avatars.githubusercontent.com/u/28929274?s=280&v=4"
+							alt="Image PlaceHolder"
+						/>
+						<span>ROCKETCARD</span>
+					</div>
+				</div>
+			</div>
+			<button id="newBg" onclick="newBackground()">
+				Gerar Background
+			</button>
+            <button onclick="salvarImg()">Salvar img</button>
+		</div>
+		<script src="script.js"></script>
+		<script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+	</body>
 </html>
